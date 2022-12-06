@@ -951,7 +951,7 @@ button.contact:not(:hover):not(:active) {
   }
 }
 
-main .quiz-list .spacer{
+.spacer{
   display: block;
   height: 15px;
 }
