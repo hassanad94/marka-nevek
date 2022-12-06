@@ -639,7 +639,7 @@ _.document.on( "ready", function(){
 
 		target.class( "active" , false ).find( ":focus" ).blur();
 
-		location.hash = "";
+		location.hash = "#_";
 
 	}
 

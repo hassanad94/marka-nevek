@@ -1,0 +1,10 @@
+hamburger menu és oda menüpontok
+regsiztráció rész mobilon nem kell.
+Már quiz felírat 
+methology egy sorban legyen
+desktop-ról a csík
+honnan fogom tudni rész-> a kép legyen a címmel egy magas és a description pedig mehet full with-be
+Messenger szövegben sortörés és a kép vegye fel
+Kezdhetjük gomb felet alatt ugyan annyi hely legyen, csikocska mobilon kuka
+space- felérő csökkenteni
+hullam túl nagyon kisebb leggyenek.
