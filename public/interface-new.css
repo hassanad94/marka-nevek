@@ -4,29 +4,36 @@
   --base-color: #666;
   --dark-gray-color: #7c7b7b;
   --dark-gray-color-2: #555;
+  --separator-gray: #ccc;
+  --base-font-size: 12px;
+  --base-line-height: 1.4;
+}
+
+@media (min-width:1024px) {
+  :root{
+    --nav-bar-height: 58px;
+    --base-font-size: 14px;
+    --base-line-height: 21px;
+  }
 }
 
 html {
   min-width: 320px;
   overscroll-behavior: smooth;
   margin: 0;
+  font-size: var(--base-font-size);
 }
 
 body {
   font-family: "Baloo Da 2", helvetica;
   margin: 0px;
   min-width: 320px;
-  line-height: 26px;
-  font-size: 19px;
   overflow-x: hidden;
   overflow-y: scroll;
   background: #fff;
   color: var(--base-color);
-}
-
-body {
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
 }
 
 button:focus {
@@ -70,6 +77,10 @@ a {
   fill: var(--grey-color);
 }
 
+.shape-fill {
+  fill: #fff;
+}
+
 .grey-section {
   background: var(--grey-color);
   padding-top: 35px;
@@ -84,6 +95,42 @@ a {
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1619960535 {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1619960535 svg {
+  position: relative;
+  display: block;
+  width: calc(109% + 1.3px);
+  height: 53px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1619960535 {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1619960535 svg {
+  position: relative;
+  display: block;
+  width: calc(109% + 1.3px);
+  height: 53px;
+  transform: rotateY(180deg);
 }
 
 a[href],
@@ -223,6 +270,12 @@ br.clear {
     margin: 0px auto;
     max-width: 1024px;
   }
+
+  .header .page-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } 
 }
 
 button {
@@ -440,7 +493,7 @@ button.loading:before {
 }
 
 .header .actions button:hover {
-  border-bottom-color: #ccc;
+  border-bottom-color: var(--separator-gray);
 }
 
 .header .actions button.logout {
@@ -481,9 +534,21 @@ button.cta:active {
   width: 100%;
 }
 
+
+@media (min-width:1024px) {
+  .header .actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .header .company{
+    flex: 1;
+    justify-content: flex-start;
+  }
+}
+
 main [class*="request-specific-page-"] {
   margin-top: var(--nav-bar-height);
-  padding-top: 25px;
 }
 
 main .activity {
@@ -492,11 +557,11 @@ main .activity {
   padding: 20px 0px;
   font-family: "Open sans";
   color: var(--dark-gray-color);
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 main .activity .presents {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -506,7 +571,7 @@ main .activity .presents {
     left: 790px;
     right: 0px;
     top: 18px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--separator-gray);
   }
 }
 
@@ -552,6 +617,7 @@ main .activity .presents {
 
 .how-it-works img[src*="arrow"] {
   transform: rotate(90deg);
+  opacity: 0.3;
 }
 
 @media (min-width: 1024px) {
@@ -563,8 +629,7 @@ main .activity .presents {
   }
 
   .how-it-works .flow {
-    margin-left: -55px;
-    margin-right: -55px;
+   flex-direction: row;
   }
 
   .how-it-works .step {
@@ -590,11 +655,13 @@ main .activity .presents {
     margin-right: -40px;
     top: 10px;
     left: 5px;
+    transform: none;
   }
 
   .how-it-works img[src*="arrow-inverted"] {
     top: 30px;
     left: -10px;
+    transform: none;
   }
 }
 
@@ -602,6 +669,7 @@ main .methodology .info-card-container {
   display: flex;
   flex-direction: column;
 }
+
 main .methodology .info-card-container .card {
   display: flex;
   align-items: center;
@@ -616,7 +684,54 @@ main .methodology .info-card-container .card .title {
   margin-bottom: 10px;
 }
 
-.methodology .info-card-container .card .description {
+main .methodology .info-card-container .card .description {
   font-family: "Open sans";
-  font-size: 1em;
+  font-size: 0.9rem;
+}
+
+main .methodology .confidence-boost{
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  flex-direction: column;
+}
+
+main .methodology .confidence-boost .info {
+  font-family: "Open sans";
+  font-size: 1rem;
+  text-align: center;
+}
+
+main .methodology .confidence-boost a[href*='#kapcsolat'] {
+  margin-top: 20px;
+  margin-bottom: 46px;
+  z-index: 2;
+}
+
+button.contact:not(:hover):not(:active) {
+  background: #fff;
+}
+
+@media (min-width:1024px) {
+  main .methodology .page-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 65px;
+  }
+
+  main .methodology .page-content .h2-wrapper {
+    flex-basis: 100%;
+  }
+
+  main .methodology .info-card-container{
+    flex: 0 1 710px;
+  }
+
+  main .methodology .confidence-boost{
+    flex-basis: 250px;
+    justify-content: center;
+    border-left: 1px solid var(--separator-gray);
+    font-size: 1.1rem;
+  }
 }
