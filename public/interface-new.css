@@ -9,8 +9,8 @@
   --base-line-height: 1.4;
 }
 
-@media (min-width:1024px) {
-  :root{
+@media (min-width: 1024px) {
+  :root {
     --nav-bar-height: 58px;
     --base-font-size: 14px;
     --base-line-height: 21px;
@@ -123,7 +123,6 @@ button.main .border-decoration {
   border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 10px;
 }
-
 
 @keyframes buttonTopBubbles {
   0% {
@@ -358,8 +357,7 @@ h2 {
   text-transform: uppercase;
 }
 
-
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .h2-wrapper:before {
     content: "";
     position: absolute;
@@ -483,17 +481,17 @@ br.clear {
     max-width: 1024px;
   }
 
-  .header .page-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  } 
-  footer .page-content{
+  .header .page-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  footer .page-content .company{
+  footer .page-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .page-content .company {
     flex: 1;
     text-align: left;
   }
@@ -755,14 +753,13 @@ button.cta:active {
   width: 100%;
 }
 
-
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .header .actions {
     flex-direction: row;
     flex-wrap: nowrap;
   }
 
-  .header .company{
+  .header .company {
     flex: 1;
     justify-content: flex-start;
   }
@@ -787,12 +784,11 @@ main .activity .presents {
 
 @media (min-width: 1024px) {
   .activity .stats {
-    text-align:center;
+    text-align: center;
   }
 }
 
 .how-it-works {
-  padding: 0px;
   padding-top: 15px;
   text-align: center;
   padding-bottom: 30px;
@@ -804,7 +800,8 @@ main .activity .presents {
 .how-it-works .flow {
   display: flex;
   align-items: flex-start;
-  padding-top: 75px;
+  padding-top: 35px;
+  padding-bottom: 20px;
 }
 
 .how-it-works .step {
@@ -829,17 +826,33 @@ main .activity .presents {
 
 .how-it-works .step img {
   height: 100px;
+  object-fit: contain;
 }
 
 .how-it-works img[src*="arrow"] {
   opacity: 0.3;
   position: absolute;
-  top: -30px;
-  left: 5%;
+  left: 8%;
+  width: 150px;
+  top: -43px;
 }
 
 .how-it-works img.second {
-  left: 46%;
+  left: 50%;
+}
+
+@media (min-width: 640px) {
+  .how-it-works img[src*="arrow"] {
+    left: 21%;
+  }
+
+  .how-it-works img.second {
+    left: 54%;
+  }
+
+  .how-it-works .flow {
+    padding-bottom: 70px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -851,7 +864,7 @@ main .activity .presents {
   }
 
   .how-it-works .flow {
-   flex-direction: row;
+    flex-direction: row;
   }
 
   .how-it-works .step {
@@ -911,7 +924,7 @@ main .methodology .info-card-container .card .description {
   font-size: 0.9rem;
 }
 
-main .methodology .confidence-boost{
+main .methodology .confidence-boost {
   display: flex;
   align-items: center;
   margin-top: 25px;
@@ -924,7 +937,7 @@ main .methodology .confidence-boost .info {
   text-align: center;
 }
 
-main .methodology .confidence-boost a[href*='#kapcsolat'] {
+main .methodology .confidence-boost a[href*="#kapcsolat"] {
   margin-top: 20px;
   margin-bottom: 46px;
   z-index: 2;
@@ -934,7 +947,7 @@ button.contact:not(:hover):not(:active) {
   background: #fff;
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   main .methodology .page-content {
     display: flex;
     flex-wrap: wrap;
@@ -946,11 +959,11 @@ button.contact:not(:hover):not(:active) {
     flex-basis: 100%;
   }
 
-  main .methodology .info-card-container{
+  main .methodology .info-card-container {
     flex: 0 1 710px;
   }
 
-  main .methodology .confidence-boost{
+  main .methodology .confidence-boost {
     flex-basis: 250px;
     justify-content: center;
     border-left: 1px solid var(--separator-gray);
@@ -958,14 +971,13 @@ button.contact:not(:hover):not(:active) {
   }
 }
 
-.spacer{
+.spacer {
   display: block;
   height: 5px;
 }
 
 .spinner {
   margin: 0px auto 100px auto;
-  width: 350px;
   height: 230px;
   transition: all 0.3s ease-out;
   border-radius: 200px;
