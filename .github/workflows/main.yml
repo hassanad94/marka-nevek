@@ -27,5 +27,6 @@ jobs:
         host: ${{secrets.VPS_IP}}
         username: ${{secrets.GIT_HUB_USER}}
         script: |
+          cd /var/www/markak
           git fetch origin
           git pull
