@@ -1,5 +1,5 @@
 :root {
-  --nav-bar-height: 126px;
+  --nav-bar-height: 58px;
   --grey-color: #f5f5f5;
   --base-color: #666;
   --dark-gray-color: #7c7b7b;
@@ -69,6 +69,50 @@ button:focus {
 }
 .description b {
   font-size: 0.9rem;
+}
+
+.hamburger-inner:before {
+  top: 10px;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+  transition-property: transform, opacity;
+}
+.hamburger-inner:after {
+  top: 20px;
+}
+
+.hamburger-inner:after {
+  bottom: -10px;
+}
+
+.hamburger-box {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.hamburger-inner {
+  top: 2px;
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  border-radius: 4px;
+  background-color: var(--dark-gray-color);
+  display: block;
+}
+
+.hamburger-inner:after,
+.hamburger-inner:before {
+  content: "";
 }
 
 button.main {
@@ -469,6 +513,10 @@ br.clear {
   padding: 0px 15px;
 }
 
+.header .page-content {
+  max-width: none;
+}
+
 .page-content.possible-x-overflow {
   overflow-x: hidden;
 }
@@ -488,7 +536,9 @@ br.clear {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1024px;
   }
+
   footer .page-content {
     display: flex;
     align-items: center;
@@ -501,6 +551,7 @@ br.clear {
 }
 
 button {
+  cursor: pointer;
   border: none;
   outline: none;
   border-radius: 5px;
@@ -663,7 +714,7 @@ button.loading:before {
   letter-spacing: 0.5px;
   font-size: 16px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .footer .company b,
@@ -757,6 +808,10 @@ button.cta:active {
 }
 
 @media (min-width: 1024px) {
+  .header .actions {
+    max-width: 1024px;
+  }
+
   .header .actions {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1015,25 +1070,35 @@ button.contact:not(:hover):not(:active) {
 }
 
 .spinner {
-  margin: 0px auto 100px auto;
-  height: 230px;
   transition: all 0.3s ease-out;
   border-radius: 200px;
   border: 1px solid transparent;
+  height: 207px;
 }
 
 .spinner [data-spinner-state] {
-  transition: all 0.5s ease-in;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /*transition: all 0.5s ease-in; */
   transform-origin: 50% 50%;
+  height: 207px;
+  position: absolute;
+  /* left: 50%; */
+  width: 100%;
+  display: flex;
+  /* top: 50%; */
+  /* transform: translate(-50%, -50%); */
+  align-items: center;
 }
 
 .spinner [data-spinner-state].inactive {
   opacity: 0;
   pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .spinner {
+    margin: 0px auto 100px auto;
+    height: 230px;
+  }
 }
 
 .window {
@@ -1056,6 +1121,7 @@ button.contact:not(:hover):not(:active) {
   pointer-events: auto;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
 .window .window-content-wrapper {
@@ -1063,6 +1129,7 @@ button.contact:not(:hover):not(:active) {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  cursor: auto;
 }
 
 @media (min-height: 800px) {
@@ -1131,6 +1198,16 @@ button.contact:not(:hover):not(:active) {
 .window a {
   color: #48e;
   text-decoration: none;
+}
+
+.window.menu [href="#csapjunk-bele"] {
+  margin-top: 15px;
+  display: block;
+}
+.window.menu [href="#csapjunk-bele"] button {
+  width: 100%;
+  line-height: 2;
+  font-size: 1.1rem;
 }
 
 .contact-option {
