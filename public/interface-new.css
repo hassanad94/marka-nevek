@@ -358,16 +358,17 @@ h2 {
   text-transform: uppercase;
 }
 
-.h2-wrapper:before {
-  content: "";
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 74px;
-  border-top: 1px solid #ccc;
-}
 
 @media (min-width:1024px) {
+  .h2-wrapper:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 74px;
+    border-top: 1px solid #ccc;
+  }
+
   h2 {
     font-size: 19px;
     padding-top: 50px;
@@ -802,13 +803,13 @@ main .activity .presents {
 
 .how-it-works .flow {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 75px;
 }
 
 .how-it-works .step {
-  display: inline-block;
-  vertical-align: top;
+  display: flex;
+  flex-direction: column;
   max-width: 30ch;
   color: var(--dark-gray-color-2);
   font-family: "Open Sans";
@@ -827,12 +828,18 @@ main .activity .presents {
 }
 
 .how-it-works .step img {
-  height: 96px;
+  height: 100px;
 }
 
 .how-it-works img[src*="arrow"] {
-  transform: rotate(90deg);
   opacity: 0.3;
+  position: absolute;
+  top: -30px;
+  left: 5%;
+}
+
+.how-it-works img.second {
+  left: 46%;
 }
 
 @media (min-width: 1024px) {
@@ -953,7 +960,7 @@ button.contact:not(:hover):not(:active) {
 
 .spacer{
   display: block;
-  height: 15px;
+  height: 5px;
 }
 
 .spinner {
