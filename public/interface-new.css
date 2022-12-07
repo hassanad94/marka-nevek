@@ -64,6 +64,13 @@ button:focus {
   user-select: none;
 }
 
+.description {
+  font-size: 0.9rem;
+}
+.description b {
+  font-size: 0.9rem;
+}
+
 button.main {
   padding: 20px 60px;
   width: 270px;
@@ -270,6 +277,20 @@ a {
   line-height: 0;
   transform: rotate(180deg);
 }
+.custom-shape-divider-bottom-1619963648 svg {
+  height: 18px;
+  width: 100%;
+}
+
+.custom-shape-divider-bottom-1619960535 {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
 
 .custom-shape-divider-bottom-1619960535 {
   position: absolute;
@@ -285,25 +306,7 @@ a {
   position: relative;
   display: block;
   width: calc(109% + 1.3px);
-  height: 53px;
-  transform: rotateY(180deg);
-}
-
-.custom-shape-divider-bottom-1619960535 {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1619960535 svg {
-  position: relative;
-  display: block;
-  width: calc(109% + 1.3px);
-  height: 53px;
+  height: 29px;
   transform: rotateY(180deg);
 }
 
@@ -800,7 +803,7 @@ main .activity .presents {
 .how-it-works .flow {
   display: flex;
   align-items: flex-start;
-  padding-top: 35px;
+  padding-top: 15px;
   padding-bottom: 20px;
 }
 
@@ -816,7 +819,7 @@ main .activity .presents {
 
 .how-it-works .step b {
   font-family: "Baloo Da 2";
-  font-size: 15px;
+  font-size: 1.1rem;
 }
 
 .how-it-works .step u {
@@ -832,33 +835,34 @@ main .activity .presents {
 .how-it-works img[src*="arrow"] {
   opacity: 0.3;
   position: absolute;
-  left: 8%;
-  width: 150px;
-  top: -43px;
+  left: 20%;
+  width: 100px;
+  top: -34px;
 }
 
 .how-it-works img.second {
-  left: 50%;
+  left: 52%;
 }
 
 @media (min-width: 640px) {
   .how-it-works img[src*="arrow"] {
-    left: 21%;
+    left: 20%;
+    width: 160px;
   }
 
   .how-it-works img.second {
-    left: 54%;
+    left: 53%;
   }
 
   .how-it-works .flow {
-    padding-bottom: 70px;
+    padding-bottom: 23px;
   }
 }
 
 @media (min-width: 1024px) {
   .how-it-works {
-    padding-top: 30px;
-    padding-bottom: 70px;
+    padding-top: 10px;
+    padding-bottom: 45px;
     line-height: 23px;
     font-size: inherit;
   }
@@ -885,18 +889,19 @@ main .activity .presents {
   }
 
   .how-it-works img[src*="arrow"] {
-    width: 140px;
-    margin-left: -40px;
+    margin-left: 232px;
     margin-right: -40px;
-    top: 10px;
-    left: 5px;
-    transform: none;
+    top: 32px;
+    left: 0;
+    width: auto;
+    transform: rotate(12deg);
   }
 
   .how-it-works img[src*="arrow-inverted"] {
-    top: 30px;
-    left: -10px;
-    transform: none;
+    top: 98px;
+    left: 0;
+    margin-left: 58%;
+    transform: rotate(-12deg);
   }
 }
 
@@ -911,17 +916,26 @@ main .methodology .info-card-container .card {
   margin-top: 25px;
 }
 main .methodology .info-card-container .card .text {
-  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+main .methodology .info-card-container .card .text img {
+  width: 50px;
 }
 
 main .methodology .info-card-container .card .title {
   color: var(--dark-gray-color-2);
-  margin-bottom: 10px;
+  flex: 1;
+  text-align: center;
 }
 
 main .methodology .info-card-container .card .description {
   font-family: "Open sans";
   font-size: 0.9rem;
+  flex-basis: 100%;
+  text-align: center;
 }
 
 main .methodology .confidence-boost {
@@ -947,7 +961,26 @@ button.contact:not(:hover):not(:active) {
   background: #fff;
 }
 
+@media (min-width: 640px) {
+  main .methodology .info-card-container .card > img {
+    margin-right: 15px;
+    width: 64px;
+  }
+
+  main .methodology .info-card-container .card .title {
+    width: auto;
+    text-align: left;
+  }
+  main .methodology .info-card-container .card .description {
+    text-align: left;
+  }
+}
+
 @media (min-width: 1024px) {
+  main .methodology {
+    padding-top: 10px;
+  }
+
   main .methodology .page-content {
     display: flex;
     flex-wrap: wrap;
@@ -960,14 +993,19 @@ button.contact:not(:hover):not(:active) {
   }
 
   main .methodology .info-card-container {
-    flex: 0 1 710px;
+    flex-basis: 709px;
   }
 
   main .methodology .confidence-boost {
-    flex-basis: 250px;
     justify-content: center;
     border-left: 1px solid var(--separator-gray);
     font-size: 1.1rem;
+    padding-left: 20px;
+    max-width: 25ch;
+  }
+
+  main .methodology .confidence-boost img {
+    width: 70px;
   }
 }
 
