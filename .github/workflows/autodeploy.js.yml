@@ -25,6 +25,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: 22
         script: |
-          cd /var/wwww/markak
+          cd ~/var/wwww/markak
           git fetch origin
           git pull
