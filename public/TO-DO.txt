@@ -8,3 +8,5 @@ methology egy sorban legyen
 - Kezdhetjük gomb felet alatt ugyan annyi hely legyen, csikocska mobilon kuka ✔✔
 - space- felérő csökkenteni ✔✔
 - hullam túl nagyon kisebb leggyenek. ✔✔
+
+ asd 
