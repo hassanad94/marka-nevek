@@ -802,7 +802,6 @@ main [class*="request-specific-page-"] {
 }
 
 main .activity {
-  line-height: 35px;
   background: var(--grey-color);
   padding: 20px 0px;
   font-family: "Open sans";
@@ -1357,4 +1356,34 @@ button.contact:not(:hover):not(:active) {
 
 .window button.cta img {
   height: 2em;
+}
+
+
+.marquee {
+  --gap: 5ch;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  animation: scroll 15s linear infinite;
+  list-style: none;
+  margin: 0;
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
 }
