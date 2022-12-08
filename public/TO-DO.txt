@@ -25,3 +25,12 @@ methology 3 icon túl nagy-> márka quiz logó méretével legyen megegyező ✔
 - menuben gombokra cserélni mint a próbáld ki ✔✔
 hamburger csikok narancs szinű ✔✔
 -magiciron hoz hasonló futó szallag text ✔✔
+
+-methodology-> legyen olyan mint a az alatta lévő szöveg néhány
+- nyilak 80%-ra
+-main .methodology .info-card-container .card .description ->justify vagy balra
+-messanger rész a szöveg a kettő között a gomb
+-fő iconnál a szöveg és az icon legyen egy sorban
+-footer a kis szöveg a logo és menü között
+-footer menü nagyobb térköz és a pontok legyenek black
+-hamburger menün a linken legyen a padding ne a gyermeken
