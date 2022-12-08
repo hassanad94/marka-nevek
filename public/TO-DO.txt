@@ -20,8 +20,8 @@ methology 3 icon túl nagy-> márka quiz logó méretével legyen megegyező ✔
 -footer marka qiz logo szöveg elötte mögötte ugyan anyni hely ✔✔
 -spinner vackor 85%-ra csökkenteni ✔✔
 -barionos vakckor kuka ✔✔
--hamburger menu akkorára mint logó 
--Menu feliratot hamburgerből kiszedni
-- menuben gombokra cserélni mint a próbáld ki
-hamburger csikok narancs szinű 
--magiciron hoz hasonló futó szallag text
+-hamburger menu akkorára mint logó ✔✔
+-Menu feliratot hamburgerből kiszedni ✔✔
+- menuben gombokra cserélni mint a próbáld ki ✔✔
+hamburger csikok narancs szinű ✔✔
+-magiciron hoz hasonló futó szallag text ✔✔
