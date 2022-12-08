@@ -695,6 +695,8 @@ _.document.on( "ready", function(){
 
 _.window.on( "load hashchange" , function( e ){
 
+	var window = $()
+
 	if( location.hash === "#_" ){
 
 		e.preventDefault();
@@ -736,7 +738,7 @@ _.window.on( "load hashchange" , function( e ){
 	}
 
 	if ( location.hash === "#menu" ) {
-		
+
 		setTimeout( function () {
 
 			$(".window.menu").class();
@@ -759,6 +761,14 @@ _.window.on( "load hashchange" , function( e ){
 		if( _.user.data && _.user.data.code ){
 
 			return location.href = "/app";
+
+		}
+
+		var menuWindow = $( ".window.menu" );
+		
+		if( menuWindow.is( ".active" ) ){
+
+			menuWindow.class( false );
 
 		}
 
