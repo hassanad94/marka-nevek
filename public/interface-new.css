@@ -370,7 +370,7 @@ h2 {
 h2 {
   font-size: 14px;
   margin-top: 20px;
-  background: #f5f5f5;
+  background: var(--grey-color);
   font-size: 12px;
   font-weight: normal;
   margin: 0px auto;
@@ -1336,4 +1336,25 @@ button.contact:not(:hover):not(:active) {
   padding: 15px 0px;
   font-size: 13px;
   margin: 15px 0px;
+}
+
+.window button.cta.secondary {
+  background: var(--separator-gray);
+  color: var(--dark-gray-color-2);
+}
+
+.window button.cta.secondary.contain-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+
+.window button.cta.secondary.contain-icon span {
+  flex: 1;
+  margin-left: -20px;
+}
+
+.window button.cta img {
+  height: 2em;
 }
