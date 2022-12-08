@@ -1265,3 +1265,69 @@ button.contact:not(:hover):not(:active) {
 .partners details summary img {
   max-height: 20px;
 }
+
+.field .error-message {
+  display: none;
+}
+
+.field.error .error-message {
+  color: #b50324;
+  font-size: 11.6px;
+  padding: 1px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.field.tac.error .error-message {
+  margin-bottom: 0px;
+  top: -5px;
+}
+
+.field.error input {
+  border-color: #b50324;
+  color: #48010e;
+}
+
+.field {
+  padding-top: 10px;
+}
+
+.field input:not([type="checkbox"]) {
+  display: block;
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.field.tac {
+  font-size: 13px;
+}
+
+.field.tac label {
+  padding: 10px 0px 0px 0px;
+  font-size: 11.3px;
+  display: block;
+}
+
+.field.tac.error {
+  color: #b50324;
+}
+
+.field input[type="email"]:focus,
+.field input[type="text"]:focus {
+  /*outline-color:#ccc;*/
+}
+
+.field input[type="checkbox"] {
+  vertical-align: middle;
+  margin-right: 10px;
+  transform: scale(1.5);
+  top: -2px;
+}
+
+.window button.cta {
+  width: 100%;
+  padding: 15px 0px;
+  font-size: 13px;
+  margin: 15px 0px;
+}
