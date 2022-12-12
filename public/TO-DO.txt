@@ -34,10 +34,10 @@ hamburger csikok narancs szinű ✔✔
 -footer a kis szöveg a logo és menü között ✔✔✔
 -footer menü nagyobb térköz és a pontok legyenek black ✔✔✔
 -hamburger menün a linken legyen a padding ne a gyermeken ✔✔✔
--login -> border legyen a bg helyett
--probáld ki ingyen -> ugyan annyi sorköz
--> az összes cta-ra buble effect
--> transition prefixek iphone -webkit ( autoprefixer online )
--hullámoknál a nagyobb térköz és egyenlőek legyenek
-- kezhetjük gomb alul felül nagyobb térköz
+-login -> border legyen a bg helyett ✔✔
+-probáld ki ingyen -> ugyan annyi sorköz ✔✔
+-> az összes cta-ra buble effect ✔✔
+-> transition prefixek iphone -webkit ( autoprefixer online ) ✔✔
+-hullámoknál a nagyobb térköz és egyenlőek legyenek ✔✔
+- kezhetjük gomb alul felül nagyobb térköz ✔✔
 - nyilacskákra nagyobb opacitás
