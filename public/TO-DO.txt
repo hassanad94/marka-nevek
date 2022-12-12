@@ -40,4 +40,5 @@ hamburger csikok narancs szinű ✔✔
 -> transition prefixek iphone -webkit ( autoprefixer online ) ✔✔
 -hullámoknál a nagyobb térköz és egyenlőek legyenek ✔✔
 - kezhetjük gomb alul felül nagyobb térköz ✔✔
-- nyilacskákra nagyobb opacitás
+- nyilacskákra nagyobb opacitás ✔✔
+
