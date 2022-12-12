@@ -190,8 +190,8 @@ button.main .border-decoration {
   }
 }
 
-button:before,
-button:after {
+button:before, a::before,
+button:after, a:after {
   position: absolute;
   content: "";
   display: block;
@@ -207,7 +207,7 @@ button:after {
   pointer-events: none;
 }
 
-button:before {
+button:before, a:before {
   display: none;
   top: -110%;
   background-image: radial-gradient(circle, #e65222 20%, transparent 20%),
@@ -223,7 +223,7 @@ button:before {
     20px 20px, 30px 30px, 20px 20px, 36px 36px;
 }
 
-button:after {
+button:after, a:after {
   display: none;
   bottom: -110%;
   background-image: radial-gradient(circle, #e65222 20%, transparent 20%),
@@ -249,12 +249,12 @@ button:after {
   }
 }
 
-button.animate:before {
+button.animate:before, a.animate:before  {
   display: block;
   animation: buttonTopBubbles ease-out 0.75s forwards;
 }
 
-button.animate:after {
+button.animate:after, a.animate:after {
   display: block;
   animation: buttonBottomBubbles ease-out 0.75s forwards;
 }
@@ -673,6 +673,14 @@ button.loading:before {
   font-family: "Baloo 2";
   z-index: 40;
   box-shadow: 0px 1px 5px rgb(0 0 0 / 10%);
+}
+
+.footer .links > a{
+  padding: 0px 5px;
+}
+
+.footer .links  .separator{
+  color: #000;
 }
 
 .footer .company,
@@ -1225,13 +1233,15 @@ button.contact:not(:hover):not(:active) {
 }
 
 .window.menu [href="#csapjunk-bele"] {
-  margin-top: 15px;
   display: block;
 }
+
 .window.menu [href="#csapjunk-bele"] button {
   width: 100%;
   line-height: 2;
   font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-option {
@@ -1357,8 +1367,9 @@ button.contact:not(:hover):not(:active) {
 }
 
 .window button.cta.secondary {
-  background: var(--separator-gray);
+  border: 1px solid var(--separator-gray);
   color: var(--dark-gray-color-2);
+  background: transparent;
 }
 
 .window button.cta.secondary.contain-icon {

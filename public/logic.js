@@ -611,22 +611,23 @@ _.document.on( "ready", function(){
 
 	try{ navigator.vibrate(30); } catch( e ){}
 
-} ).on( "click" , "button" , function(){
+} ).on( "click" , "button, a" , function(){
 
 	var button = $( this ).class( "animate" , false );
 
+	
 	clearTimeout( button.attr( "data-current-animation-timeout" ) );
-
+	
 	var buttonTimeout = setTimeout( function(){
-
+		
 		button.class( "animate" , false );
-
+		
 	} , 750 );
-
+	
 	setTimeout( function(){
-
+		
 		button.attr( "data-current-animation-timeout" , buttonTimeout ).class( "animate" );
-
+		
 	} , 5 );
 
 } ).on( "mousedown touchstart" , ".window, .window *" , function( event ){
