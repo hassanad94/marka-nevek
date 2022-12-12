@@ -1382,10 +1382,6 @@ button.contact:not(:hover):not(:active) {
   padding: 0;
 }
 
-.marquee__content li {
-  padding-left: 5px;
-}
-
 
 @keyframes scroll {
   from {
