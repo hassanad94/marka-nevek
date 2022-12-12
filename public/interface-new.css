@@ -9,7 +9,7 @@
   --base-font-size: 12px;
   --base-line-height: 1.4;
   --logo-icon-height: 38px;
-  --logo-icon-width: 34px;
+  --logo-icon-width: 25px;
   --spinner-height: 160px;
 }
 
@@ -727,7 +727,6 @@ button.loading:before {
 .footer .logo:not(svg),
 .header .logo:not(svg) {
   padding: 5px;
-  top: 1px;
 }
 
 .header .actions button {
@@ -867,13 +866,13 @@ main .activity .presents {
 .how-it-works img[src*="arrow"] {
   opacity: 0.3;
   position: absolute;
-  left: 19.5%;
-  width: 100px;
-  top: -34px;
+  left: 21%;
+  width: 80px;
+  top: -24px;
 }
 
 .how-it-works img.second {
-  left: 52.5%;
+  left: 55.5%;
 }
 
 @media (min-width: 640px) {
@@ -944,6 +943,8 @@ main .activity .presents {
 main .methodology .info-card-container {
   display: flex;
   flex-direction: column;
+  max-width: 270px;
+  margin: auto;
 }
 
 main .methodology .info-card-container .card {
@@ -955,8 +956,9 @@ main .methodology .info-card-container .card .text {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
+
 main .methodology .info-card-container .card .text img {
   width: var(--logo-icon-height);
 }
@@ -966,6 +968,7 @@ main .methodology .info-card-container .card .title {
   text-align: left;
   display: inline-block;
   margin-left: 13px;
+  flex: 1;
 }
 
 main .methodology .info-card-container .card .title span {
@@ -977,7 +980,9 @@ main .methodology .info-card-container .card .description {
   font-family: "Open sans";
   font-size: 0.9rem;
   flex-basis: 100%;
-  text-align: center;
+  text-align: justify;
+  max-width: 270px;
+  padding-left: 3px;
 }
 
 main .methodology .confidence-boost {
@@ -986,6 +991,11 @@ main .methodology .confidence-boost {
   margin-top: 25px;
   flex-direction: column;
 }
+
+main .methodology .confidence-boost > * {
+  height: 38px;
+}
+
 main .methodology .confidence-boost img {
   width: var(--logo-icon-height);
 }
@@ -997,7 +1007,6 @@ main .methodology .confidence-boost .info {
 }
 
 main .methodology .confidence-boost a[href*="#kapcsolat"] {
-  margin-top: 20px;
   margin-bottom: 46px;
   z-index: 2;
 }
@@ -1007,6 +1016,10 @@ button.contact:not(:hover):not(:active) {
 }
 
 @media (min-width: 640px) {
+
+  main .methodology .info-card-container{
+    max-width: none;
+  }
 
   main .methodology .info-card-container .card .title span {
     display: inline-block;
@@ -1030,8 +1043,11 @@ button.contact:not(:hover):not(:active) {
     width: auto;
     text-align: left;
   }
+
   main .methodology .info-card-container .card .description {
     text-align: left;
+    max-width: none;
+    padding-left: 0;
   }
 }
 
