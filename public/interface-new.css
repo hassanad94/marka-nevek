@@ -100,7 +100,7 @@ button:focus {
   margin-bottom: 4px;
 }
 
-button.main {
+button.main{
   padding: 20px 60px;
   width: 270px;
   margin: 0px auto;
@@ -373,7 +373,7 @@ a {
 
 .white-section h2 {
   background: #fff;
-  margin-top: 30px;
+  margin-top: 45px;
 }
 
 .custom-shape-divider-bottom-1619963648 {
@@ -827,11 +827,6 @@ button.loading:before {
   color: #000;
 }
 
-.footer .company,
-.footer .links {
-  margin: 5px;
-}
-
 .header .company {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -841,6 +836,7 @@ button.loading:before {
 
 .footer .company {
   margin-left: 0px;
+  margin-bottom: 10px;
 }
 
 .footer .company,
@@ -862,7 +858,7 @@ button.loading:before {
   font-weight: normal;
 }
 
-.footer .company .slogan,
+.footer .slogan,
 .header .company .slogan {
   font-family: "Open Sans";
   font-size: 8px;
@@ -872,8 +868,13 @@ button.loading:before {
   cursor: default;
 }
 
-.footer .company .slogan {
+.footer .slogan {
   display: block;
+ margin-bottom: 15px;
+}
+
+.footer .links{
+  margin-bottom: 10px;
 }
 
 .footer .logo,
@@ -1029,11 +1030,12 @@ main .activity .presents {
   font-family: "Open Sans";
   font-size: 13px;
   line-height: 1.5;
+  flex:1;
 }
 
 .how-it-works .step b {
   font-family: "Baloo Da 2";
-  font-size: 1.1rem;
+  display: inline;
 }
 
 .how-it-works .step u {
@@ -1193,6 +1195,7 @@ main .methodology .info-card-container .card .description {
   text-align: justify;
   max-width: 266px;
   padding-left: 3px;
+  margin-top: 5px;
 }
 
 main .methodology .confidence-boost {
@@ -1202,7 +1205,7 @@ main .methodology .confidence-boost {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 25px;
+  margin-top: 15px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1211,6 +1214,7 @@ main .methodology .confidence-boost {
 
 main .methodology .confidence-boost > * {
   height: 38px;
+  margin-bottom: 10px;
 }
 
 main .methodology .confidence-boost img {
@@ -1225,6 +1229,7 @@ main .methodology .confidence-boost .info {
 
 main .methodology .confidence-boost a[href*="#kapcsolat"] {
   z-index: 2;
+  margin-bottom: 0;
 }
 
 button.contact:not(:hover):not(:active) {
@@ -1307,7 +1312,8 @@ button.contact:not(:hover):not(:active) {
   }
 
   main .methodology .confidence-boost img {
-    width: 70px;
+    width: 64px;
+    height: auto;
   }
 }
 
@@ -1346,6 +1352,10 @@ button.contact:not(:hover):not(:active) {
           align-items: center;
 }
 
+.spinner [data-spinner-state='ready'] {
+  padding-top: 10px;
+}
+
 .spinner [data-spinner-state].inactive {
   opacity: 0;
   pointer-events: none;
@@ -1353,6 +1363,7 @@ button.contact:not(:hover):not(:active) {
 
 .spinner [data-spinner-state="loading"] svg {
   height: var(--spinner-height);
+  padding: 6%;
 }
 
 @media (min-width: 1024px) {
@@ -1409,10 +1420,8 @@ button.contact:not(:hover):not(:active) {
 
 .window .window-content-wrapper .content {
   padding: 30px;
-  background: #fff;
+  background: none;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
   width: 340px;
   max-height: 90vh;
   overflow: auto;
@@ -1489,8 +1498,17 @@ button.contact:not(:hover):not(:active) {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: white;
+  color: var(--base-color-2);
+}
+
+.window.menu [href="#csapjunk-bele"] button .border-decoration {
+  border-radius: 5px;
+  border-color: var(--base-color-2);
+  border-width: 2px;
 }
 
 .contact-option {
@@ -1625,6 +1643,9 @@ button.contact:not(:hover):not(:active) {
   margin: 15px 0px;
 }
 
+.window.menu  button.cta.secondary {
+  background: #fff;
+}
 .window button.cta.secondary {
   border: 1px solid var(--separator-gray);
   color: var(--dark-gray-color-2);

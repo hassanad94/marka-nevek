@@ -42,3 +42,15 @@ hamburger csikok narancs szinű ✔✔
 - kezhetjük gomb alul felül nagyobb térköz ✔✔
 - nyilacskákra nagyobb opacitás ✔✔
 
+
+- nyilas résznél ne szavanként legyen a tagolás, valamit ki kéne találni. ✔✔✔
+- a válaszok a kérdések-re legyenek lejjebb ✔✔
+-cím és folyószöveg térköze legyen a kapcsolat felvétel résznél (messanger résznél) ✔✔
+-kezdhetjük-re padding-top 10px ✔✔
+-alsó hullám alatti rész egyenlő egyszerű ✔✔
+-alsó footer footer váltsd értekre  nagyobb térköz alul felül ✔✔
+-reg quiz nélkül legyen olyan mint a kezdödhet ✔✔
+-márka quiz logo a menü tetejére 
+-window-content-nek legyen háttere ✔✔
+-a spinner- vagy scale vagy padding 75-ra ✔✔
+
