@@ -12,6 +12,8 @@
   --logo-icon-width: 25px;
   --spinner-height: 200px;
   --section-y-padding: 40px;
+  --icon-width: 64px;
+  --header-action-font-size : 12px;
 }
 
 @media (min-width: 1024px) {
@@ -54,6 +56,18 @@ button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.flex-center{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
 }
 
 .no-pointer {
@@ -133,6 +147,10 @@ button.main img {
   height: 18px;
   top: 4px;
   margin-right: 12px;
+}
+button .design-icon {
+  margin-right: 12px;
+  height: 18px;
 }
 
 button.main:hover {
@@ -656,6 +674,15 @@ br.clear {
         -ms-flex: 1;
             flex: 1;
     text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -870,7 +897,7 @@ button.loading:before {
 
 .footer .slogan {
   display: block;
- margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .footer .links{
@@ -891,7 +918,7 @@ button.loading:before {
 
 .header .actions button {
   top: 0px;
-  font-size: 12px;
+  font-size: var(--header-action-font-size);
   white-space: nowrap;
   /*overflow: hidden;*/
   -o-text-overflow: ellipsis;
@@ -969,6 +996,16 @@ button.cta:active {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+
+  .footer .slogan,
+  .header .company .slogan {
+    font-size: var(--header-action-font-size);
+    opacity: 0.5;
+  }
+
+  .footer .slogan{
+    margin-bottom: 0px;
   }
 }
 
@@ -1064,15 +1101,16 @@ main .activity .presents {
 @media (min-width: 640px) {
 
   .how-it-works .step img{
-    width: auto;
+    width: var(--icon-width);
   }
+
   .how-it-works img[src*="arrow"] {
-    left: 20%;
-    width: 160px;
+    left: 24%;
+    width: 110px;
   }
 
   .how-it-works img.second {
-    left: 53%;
+    left: 57%;
   }
 
   .how-it-works .flow {
@@ -1113,23 +1151,23 @@ main .activity .presents {
   }
 
   .how-it-works img[src*="arrow"] {
-    margin-left: 232px;
+    margin-left: 240px;
     margin-right: -40px;
-    top: 32px;
+    top: 25px;
     left: 0;
-    width: auto;
-    -webkit-transform: rotate(12deg);
-        -ms-transform: rotate(12deg);
-            transform: rotate(12deg);
+    width: 150px;
+    -webkit-transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+            transform: rotate(6deg);
   }
 
   .how-it-works img[src*="arrow-inverted"] {
-    top: 98px;
+    top: 91px;
     left: 0;
-    margin-left: 58%;
-    -webkit-transform: rotate(-12deg);
-        -ms-transform: rotate(-12deg);
-            transform: rotate(-12deg);
+    margin-left: 60.5%;
+    -webkit-transform: rotate(-9deg);
+        -ms-transform: rotate(-9deg);
+            transform: rotate(-9deg);
   }
 }
 
@@ -1213,13 +1251,15 @@ main .methodology .confidence-boost {
 }
 
 main .methodology .confidence-boost > * {
-  height: 38px;
   margin-bottom: 10px;
 }
 
 main .methodology .confidence-boost img {
-  width: var(--logo-icon-height);
+  height: auto;
+  width: var(--icon-width);
+  margin-bottom: 5px;
 }
+
 
 main .methodology .confidence-boost .info {
   font-family: "Open sans";
@@ -1259,7 +1299,7 @@ button.contact:not(:hover):not(:active) {
 
   main .methodology .info-card-container .card > img {
     margin-right: 15px;
-    width: 64px;
+    width: var(--icon-width);
   }
 
   main .methodology .info-card-container .card .title {
@@ -1277,6 +1317,10 @@ button.contact:not(:hover):not(:active) {
 @media (min-width: 1024px) {
   main .methodology {
     padding-top: 10px;
+  }
+
+  main .methodology .confidence-boost img{
+    margin-bottom: 0px;
   }
 
   main .methodology .page-content {
@@ -1309,11 +1353,6 @@ button.contact:not(:hover):not(:active) {
     font-size: 1.1rem;
     padding-left: 20px;
     max-width: 25ch;
-  }
-
-  main .methodology .confidence-boost img {
-    width: 64px;
-    height: auto;
   }
 }
 
@@ -1364,6 +1403,12 @@ button.contact:not(:hover):not(:active) {
 .spinner [data-spinner-state="loading"] svg {
   height: var(--spinner-height);
   padding: 6%;
+}
+
+@media (min-width: 640px) {
+  .spinner [data-spinner-state="loading"] svg {
+    padding: 20px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1420,7 +1465,7 @@ button.contact:not(:hover):not(:active) {
 
 .window .window-content-wrapper .content {
   padding: 30px;
-  background: none;
+  background: #fff;
   border-radius: 5px;
   width: 340px;
   max-height: 90vh;
@@ -1494,15 +1539,12 @@ button.contact:not(:hover):not(:active) {
   width: 100%;
   line-height: 2;
   font-size: 1.1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   border-radius: 5px;
   background: white;
   color: var(--base-color-2);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 2px solid var(--base-color-2);
 }
 
 .window.menu [href="#csapjunk-bele"] button .border-decoration {

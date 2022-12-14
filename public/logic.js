@@ -593,6 +593,18 @@ _.document.on( "ready", function(){
 
 		e.preventDefault();
 
+		var window = o.closest( ".window" );
+
+		if( window.is( ".active" ) && o.is( ".start-app" ) ){
+
+			location.hash = "#_";
+
+			var mainButton = $( "#csapjunk-bele [data-spinner-state='ready']:not( .inactive ) button.main" );
+
+			mainButton.trigger( "click" );
+
+		} 
+
 		target.class( "scroll-destination" );
 
 		setTimeout( function(){
@@ -615,7 +627,6 @@ _.document.on( "ready", function(){
 
 	var button = $( this ).class( "animate" , false );
 
-	
 	clearTimeout( button.attr( "data-current-animation-timeout" ) );
 	
 	var buttonTimeout = setTimeout( function(){
@@ -692,15 +703,21 @@ _.document.on( "ready", function(){
 
 	$( ".cookie-banner" ).class( "hidden" );
 
-} )
+} ).on( "click" , ".window button.main", function(){
+
+	var button = $( this );
+
+	// button.closest( ".window" ).class( false );
+
+});
 
 _.window.on( "load hashchange" , function( e ){
-
-	var window = $()
 
 	if( location.hash === "#_" ){
 
 		e.preventDefault();
+
+		$( ".window" ).class( false );
 
 	}
 
