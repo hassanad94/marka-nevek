@@ -78,6 +78,15 @@ String.prototype.huf = function (m, toFixedPrecision) {
 
 // Lazy Load
 
+_.window.openWindow = function( window ){
+
+	var openWindow = $( `.window.${window}` ).class( true );
+
+	_.body.class( "active-window" );
+
+}
+
+
 _.lazyLoad = {};
 
 _.lazyLoad.tick = function (forceLazyLoadTick) {
@@ -642,15 +651,17 @@ _.document.on( "ready", function(){
 	} , 5 );
 
 } ).on( "mousedown touchstart" , ".window, .window *" , function( event ){
-
-	event.stopPropagation();
-
+	
 	var target = $( this );
-
+	
+	event.stopPropagation();
+	
 	if( target.is( ".window" ) && ! target.is( ".persistent" ) ){
-
+		
 		target.class( "active" , false ).find( ":focus" ).blur();
 
+		_.body.class( "active-window", false )
+		
 		location.hash = "#_";
 
 	}
@@ -703,13 +714,7 @@ _.document.on( "ready", function(){
 
 	$( ".cookie-banner" ).class( "hidden" );
 
-} ).on( "click" , ".window button.main", function(){
-
-	var button = $( this );
-
-	// button.closest( ".window" ).class( false );
-
-});
+} )
 
 _.window.on( "load hashchange" , function( e ){
 
@@ -749,7 +754,7 @@ _.window.on( "load hashchange" , function( e ){
 
 		setTimeout( function(){ 
 
-			$( ".window.contact" ).class();
+			_.window.openWindow( "contact" );
 
 		} , 100 );
 
@@ -759,16 +764,16 @@ _.window.on( "load hashchange" , function( e ){
 
 		setTimeout( function () {
 
-			$(".window.menu").class();
-
+			_.window.openWindow( "menu" );
+			
 		} , 100);
 	}
-
+	
 	if( location.hash === "#partnereink" ){
-
+		
 		setTimeout( function(){ 
-
-			$( ".window.partners" ).class();
+			
+			_.window.openWindow( "partners" );
 
 		} , 100 );
 
@@ -790,7 +795,7 @@ _.window.on( "load hashchange" , function( e ){
 
 		}
 
-		$( ".window.login" ).class();
+		_.window.openWindow( "login" );
 
 	}
 

@@ -62,12 +62,12 @@ hamburger csikok narancs szinű ✔✔
 -footer-ben a slogen autista helyen van. ✔✔
 -Márka quiz logó szövege feljebb van ??
 -kapcsolatfelvétel gombnál a helyek ✔✔
-- próbáld ki regnélkül gomba legyen egy play gomb
--kezdhetjük spiningje túl kicsi
--a legtöbb widow mögött legyen white kivéve menü
-- ha megnyomom a kezdödhet regisztráció nélkül akkor a kezdhetjük gombot nyomja meg window-t csakja be
--az iconok egy nagyságuak legyenek
+- próbáld ki regnélkül gomba legyen egy play gomb ✔✔
+-kezdhetjük spiningje túl kicsi ✔✔
+-a legtöbb widow mögött legyen white kivéve menü ✔✔
+- ha megnyomom a kezdödhet regisztráció nélkül akkor a kezdhetjük gombot nyomja meg window-t csakja be ✔✔
+-az iconok egy nagyságuak legyenek ✔
 ---- tablete csak tableten
-Quizeinkról dióhéjban és alatt 30%-val nagyobb legyen icon méretek
--messengeres szekció menjen lejjeb
--window mögötti rész ne legyen kattinható- messanger gombra rá lehet nnyomni 
+Quizeinkról dióhéjban és alatt 30%-val nagyobb legyen icon méretek ✔✔
+-messengeres szekció menjen lejjeb ✔✔
+-window mögötti rész ne legyen kattinható- messanger gombra rá lehet nnyomni  ✔✔✔✔✔✔✔
