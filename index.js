@@ -19,7 +19,7 @@ const options = {
 
 const pageInit = ( page ) => {
 
-  const pageContent = fs.readFileSync(path.join(__dirname, "/public/main2.html")).toString();
+  const pageContent = fs.readFileSync(path.join(__dirname, "./frontend/main2.html")).toString();
 
   const $ = cheerio.load(pageContent);
 
@@ -31,7 +31,16 @@ const pageInit = ( page ) => {
 
 }
 
-app.use(express.static("public", options));
+app.use(express.static("frontend", options));
+
+//Except JSON
+app.use( express.json() );
+
+const userRouter = require( "./backend/routes/user" );
+
+app.use( "/api/user", userRouter )
+
+
 
 app.get("/", function (req, res) {
 
