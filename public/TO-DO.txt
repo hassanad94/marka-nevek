@@ -71,3 +71,6 @@ hamburger csikok narancs szinű ✔✔
 Quizeinkról dióhéjban és alatt 30%-val nagyobb legyen icon méretek ✔✔
 -messengeres szekció menjen lejjeb ✔✔
 -window mögötti rész ne legyen kattinható- messanger gombra rá lehet nnyomni  ✔✔✔✔✔✔✔
+
+
+bejelentkezés, regisztráció, elfelejtett jelszó, 

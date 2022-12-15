@@ -805,7 +805,7 @@ _.window.on( "load hashchange" , function( e ){
 
 
 
-$( "[class*='request-specific-page-'" ).not( "[class*='home']" ).remove();
+// $( "[class*='request-specific-page-'" ).not( "[class*='home']" ).remove();
 
 // _.body.class( "logged-in" );
 
